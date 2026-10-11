@@ -2,8 +2,11 @@
 use App\Http\Controllers\ListMahasiswaController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\KalkulatorController;
+use App\Http\Controllers\FieldController;
 
 Route::get('/datadiri', [ProfilController::class, 'index']);
+
+Route::resource('fields', FieldController::class);
 
 // opsi 1
 Route::get('/listMahasiswa', function() {
